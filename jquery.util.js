@@ -25,7 +25,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 (function($) {
 	/**
-	 * Check if element is in viewport
+	 * @function inViewport
+	 * @description Check if element is in viewport
 	 * @return {boolean} true if element in viewport
 	 * @author Deddy Lasmono Putro
 	 */
@@ -41,7 +42,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	};
 
 	/**
-	 * Get HTML string of element
+	 * @function outerHTML
+	 * @description Get HTML string of element
 	 * @return {String}   Outer HTML string of an element
 	 * @author Deddy Lasmono Putro
 	 */
@@ -50,7 +52,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	};
 
 	/**
-	 * Check if element touched the top of the window
+	 * @function touchTop
+	 * @description Check if element touched the top of the window
 	 * @return {boolean} true if element touched the top of the window
 	 * @author Deddy Lasmono Putro
 	 */
@@ -60,7 +63,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	};
 
 	/**
-	 * Check if element touched the bottom of the window
+	 * @function touchBottom
+	 * @description Check if element touched the bottom of the window
 	 * @return {boolean} true if element touched the bottom of the window
 	 * @author Deddy Lasmono Putro
 	 */
@@ -70,7 +74,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	};
 
 	/**
-	 * Get RGB value from hex color
+	 * @function getRGB
+	 * @description Get RGB value from hex color
 	 * @param  {string} color Hex color
 	 * @return {object}       Objct containing RGB value
 	 * @author Deddy Lasmono Putro
@@ -103,7 +108,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	};
 
 	/**
-	 * Get ideal color (black or white) for defined background color
+	 * @function idealTextColor
+	 * @description Get ideal color (black or white) for defined background color
 	 * @param  {string} bgColor Hex color
 	 * @return {string} color Hex color (black/white)
 	 * @author Deddy Lasmono Putro
@@ -118,15 +124,16 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	};
 
 	/**
-	 * Center an element
+	 * @function center
+	 * @description Center an element
 	 * @return {jQuery} jQuery object
 	 * @author Deddy Lasmono Putro
 	 */
 	$.fn.center = function () {
-		var wd = $(window)
-	  this.css("position","absolute");
-	  this.css("top", Math.max(0, ((wd.height() - this.outerHeight(false)) / 2) + wd.scrollTop()) + "px");
-	  this.css("left", Math.max(0, ((wd.width() - this.outerWidth(false)) / 2) + wd.scrollLeft()) + "px");
-	  return this;
+		var wd = $(window);
+		this.css("position","absolute");
+		this.css("top", Math.max(0, ((wd.height() - this.outerHeight(false)) / 2) + wd.scrollTop()) + "px");
+		this.css("left", Math.max(0, ((wd.width() - this.outerWidth(false)) / 2) + wd.scrollLeft()) + "px");
+		return this;
 	};
 })(jQuery);
